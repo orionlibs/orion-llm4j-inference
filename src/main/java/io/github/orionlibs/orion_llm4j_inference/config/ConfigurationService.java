@@ -45,6 +45,16 @@ public class ConfigurationService
 
 
     /**
+     * registers custom config
+     * @param customConfigFile
+     */
+    public static void registerConfiguration(String customConfigFile) throws IOException
+    {
+        configurationRegistry.loadFeatureConfiguration(customConfigFile);
+    }
+
+
+    /**
      * stores a config object
      * @param configuration
      */
