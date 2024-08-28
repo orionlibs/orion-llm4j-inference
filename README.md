@@ -1,2 +1,2 @@
-# project-name
-A description
+Orion LLM4J Inference
+Java abstraction for LLM inference engines 
