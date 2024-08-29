@@ -34,4 +34,10 @@ public abstract class LLMProcessor
     {
         return weights;
     }
+
+
+    public Tokenizer getTokenizer()
+    {
+        return tokenizer;
+    }
 }
