@@ -1,4 +1,4 @@
-package io.github.orionlibs.orion_llm4j_inference.core;
+package io.github.orionlibs.orion_llm4j_inference.core.io;
 
 import java.util.ArrayList;
 import java.util.List;

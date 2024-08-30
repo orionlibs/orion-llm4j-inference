@@ -1,5 +1,8 @@
 package io.github.orionlibs.orion_llm4j_inference.core;
 
+import io.github.orionlibs.orion_llm4j_inference.core.inference.NextTokenGenerator;
+import io.github.orionlibs.orion_llm4j_inference.core.io.LLMResponse;
+import io.github.orionlibs.orion_llm4j_inference.core.model.Weights;
 import io.github.orionlibs.orion_llm4j_inference.core.sampler.Sampler;
 import io.github.orionlibs.orion_llm4j_inference.core.token.TokenGenerationState;
 import io.github.orionlibs.orion_llm4j_inference.core.token.TokenGenerator;

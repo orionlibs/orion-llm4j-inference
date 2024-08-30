@@ -1,4 +1,4 @@
-package io.github.orionlibs.orion_llm4j_inference.core;
+package io.github.orionlibs.orion_llm4j_inference.core.model;
 
 import io.github.orionlibs.orion_llm4j_inference.core.tensor.FloatTensor;
 import java.nio.FloatBuffer;
