@@ -1,6 +1,6 @@
 package io.github.orionlibs.orion_llm4j_inference.core;
 
-public final class Configuration
+public final class LLMConfiguration
 {
     public final int dim; // transformer dimension
     public final int hiddenDim; // for ffn layers
@@ -15,7 +15,7 @@ public final class Configuration
     public final int headSize;
 
 
-    public Configuration(int dim, int hiddenDim, int numberOfLayers, int numberOfHeads, int numberOfKeyValueHeads, int vocabularySize, int contextLength, boolean sharedWeights, float rmsNormEps, float ropeTheta)
+    public LLMConfiguration(int dim, int hiddenDim, int numberOfLayers, int numberOfHeads, int numberOfKeyValueHeads, int vocabularySize, int contextLength, boolean sharedWeights, float rmsNormEps, float ropeTheta)
     {
         this.dim = dim;
         this.hiddenDim = hiddenDim;

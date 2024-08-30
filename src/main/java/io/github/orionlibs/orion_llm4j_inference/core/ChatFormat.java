@@ -1,9 +1,10 @@
 package io.github.orionlibs.orion_llm4j_inference.core;
 
-import java.util.List;
+import io.github.orionlibs.orion_llm4j_inference.core.encoder.HeaderEncoder;
+import io.github.orionlibs.orion_llm4j_inference.core.encoder.MessageEncoder;
 import java.util.Set;
 
-public abstract class ChatFormat
+public abstract class ChatFormat implements MessageEncoder, HeaderEncoder
 {
     protected final Tokenizer tokenizer;
     protected int beginOfText;
@@ -15,19 +16,7 @@ public abstract class ChatFormat
     }
 
 
-    public abstract List<Integer> encodeMessage(Message message);
-
-
-    public abstract List<Integer> encodeHeader(Message message);
-
-
     public abstract Set<Integer> getStopTokens();
-
-
-    public Tokenizer getTokenizer()
-    {
-        return tokenizer;
-    }
 
 
     public int getBeginOfText()

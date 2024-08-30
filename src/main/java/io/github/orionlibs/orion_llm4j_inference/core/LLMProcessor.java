@@ -5,31 +5,25 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.IntConsumer;
 
-public abstract class LLMProcessor
+public abstract class LLMProcessor extends TokenGenerator
 {
-    protected Configuration configuration;
-    protected Tokenizer tokenizer;
-    protected Weights weights;
+    private Tokenizer tokenizer;
+    private Weights weights;
     protected NextTokenGenerator nextTokenGenerator;
 
 
-    public LLMProcessor(Configuration configuration, Tokenizer tokenizer, Weights weights, NextTokenGenerator nextTokenGenerator)
+    public LLMProcessor(LLMConfiguration configuration, Tokenizer tokenizer, Weights weights, NextTokenGenerator nextTokenGenerator)
     {
-        this.configuration = configuration;
+        super(configuration);
         this.tokenizer = tokenizer;
         this.weights = weights;
         this.nextTokenGenerator = nextTokenGenerator;
     }
 
 
-    public abstract Response generateTokens(LLMProcessor model, State state, int startPosition, List<Integer> promptTokens, Set<Integer> stopTokens, int maxTokens, Sampler sampler,
+    @Override
+    public abstract Response generateTokens(TokenGenerationState state, int startPosition, List<Integer> promptTokens, Set<Integer> stopTokens, int maxTokens, Sampler sampler,
                     IntConsumer onTokenGenerated);
-
-
-    public Configuration getConfiguration()
-    {
-        return configuration;
-    }
 
 
     public Weights getWeights()
