@@ -1,5 +1,6 @@
 package io.github.orionlibs.orion_llm4j_inference.core;
 
+import io.github.orionlibs.orion_llm4j_inference.core.token.Tokenizer;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Map;

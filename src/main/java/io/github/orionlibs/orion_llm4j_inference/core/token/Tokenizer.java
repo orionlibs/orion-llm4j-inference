@@ -1,4 +1,4 @@
-package io.github.orionlibs.orion_llm4j_inference.core;
+package io.github.orionlibs.orion_llm4j_inference.core.token;
 
 import io.github.orionlibs.orion_llm4j_inference.core.utils.Pair;
 import java.util.List;

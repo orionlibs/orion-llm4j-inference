@@ -3,7 +3,7 @@ package io.github.orionlibs.orion_llm4j_inference.core;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Response
+public class LLMResponse
 {
     private StringBuilder content;
     private String statsFormatted;
@@ -12,7 +12,7 @@ public class Response
     private int numberOfTokensGenerated;
 
 
-    public Response(int maxTokens)
+    public LLMResponse(int maxTokens)
     {
         this.content = new StringBuilder();
         this.responseTokens = new ArrayList<>(maxTokens);

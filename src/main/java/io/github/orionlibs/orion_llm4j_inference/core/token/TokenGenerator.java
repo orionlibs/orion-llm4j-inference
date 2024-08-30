@@ -1,5 +1,7 @@
-package io.github.orionlibs.orion_llm4j_inference.core;
+package io.github.orionlibs.orion_llm4j_inference.core.token;
 
+import io.github.orionlibs.orion_llm4j_inference.core.LLMConfiguration;
+import io.github.orionlibs.orion_llm4j_inference.core.LLMResponse;
 import io.github.orionlibs.orion_llm4j_inference.core.sampler.Sampler;
 import java.util.List;
 import java.util.Set;
@@ -16,7 +18,7 @@ public abstract class TokenGenerator
     }
 
 
-    public abstract Response generateTokens(TokenGenerationState state, int startPosition, List<Integer> promptTokens, Set<Integer> stopTokens, int maxTokens, Sampler sampler, IntConsumer onTokenGenerated);
+    public abstract LLMResponse generateTokens(TokenGenerationState state, int startPosition, List<Integer> promptTokens, Set<Integer> stopTokens, int maxTokens, Sampler sampler, IntConsumer onTokenGenerated);
 
 
     public LLMConfiguration getConfiguration()
