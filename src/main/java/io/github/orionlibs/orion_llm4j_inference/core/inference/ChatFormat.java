@@ -1,4 +1,4 @@
-package io.github.orionlibs.orion_llm4j_inference.core;
+package io.github.orionlibs.orion_llm4j_inference.core.inference;
 
 import io.github.orionlibs.orion_llm4j_inference.core.encoder.HeaderEncoder;
 import io.github.orionlibs.orion_llm4j_inference.core.encoder.MessageEncoder;

@@ -1,6 +1,5 @@
-package io.github.orionlibs.orion_llm4j_inference.core;
+package io.github.orionlibs.orion_llm4j_inference.core.inference;
 
-import io.github.orionlibs.orion_llm4j_inference.core.inference.NextTokenGenerator;
 import io.github.orionlibs.orion_llm4j_inference.core.io.LLMResponse;
 import io.github.orionlibs.orion_llm4j_inference.core.model.Weights;
 import io.github.orionlibs.orion_llm4j_inference.core.sampler.Sampler;
@@ -11,14 +10,14 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.IntConsumer;
 
-public abstract class LLMProcessor extends TokenGenerator
+public abstract class LLMInferencer extends TokenGenerator
 {
     private Tokenizer tokenizer;
     private Weights weights;
     protected NextTokenGenerator nextTokenGenerator;
 
 
-    public LLMProcessor(LLMConfiguration configuration, Tokenizer tokenizer, Weights weights, NextTokenGenerator nextTokenGenerator)
+    public LLMInferencer(LLMConfiguration configuration, Tokenizer tokenizer, Weights weights, NextTokenGenerator nextTokenGenerator)
     {
         super(configuration);
         this.tokenizer = tokenizer;

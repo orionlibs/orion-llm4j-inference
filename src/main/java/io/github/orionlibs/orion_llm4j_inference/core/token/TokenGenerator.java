@@ -1,6 +1,6 @@
 package io.github.orionlibs.orion_llm4j_inference.core.token;
 
-import io.github.orionlibs.orion_llm4j_inference.core.LLMConfiguration;
+import io.github.orionlibs.orion_llm4j_inference.core.inference.LLMConfiguration;
 import io.github.orionlibs.orion_llm4j_inference.core.io.LLMResponse;
 import io.github.orionlibs.orion_llm4j_inference.core.sampler.Sampler;
 import java.util.List;
