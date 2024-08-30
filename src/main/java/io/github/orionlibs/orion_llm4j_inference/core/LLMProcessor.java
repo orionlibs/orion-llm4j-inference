@@ -10,13 +10,15 @@ public abstract class LLMProcessor
     protected Configuration configuration;
     protected Tokenizer tokenizer;
     protected Weights weights;
+    protected NextTokenGenerator nextTokenGenerator;
 
 
-    public LLMProcessor(Configuration configuration, Tokenizer tokenizer, Weights weights)
+    public LLMProcessor(Configuration configuration, Tokenizer tokenizer, Weights weights, NextTokenGenerator nextTokenGenerator)
     {
         this.configuration = configuration;
         this.tokenizer = tokenizer;
         this.weights = weights;
+        this.nextTokenGenerator = nextTokenGenerator;
     }
 
 
